@@ -2,57 +2,60 @@ const year = prompt("Введите год рождения", 1999);
 const city = prompt("Введите ваш город", "Харьков");
 const sport = prompt("Введите любимый вид спорта", "Сон");
 
-
 const current = 2022;
 let IsAnyCity = true;
+let output = '';
+
 switch (city) {
   case "Киев":
-    alert(`Ты живешь в Украине`)
+    output += 'Ты живешь в Украине\n';
     break;
   case "Лондон":
-    alert(`Ты живешь в Великобритании`)
+    output += 'Ты живешь в Великобритании\n';
     break;
   case "Вашингтон":
-    alert(`Ты живешь в США`)
+    output += 'Ты живешь в США\n';
     break;
   case null:
   case "":
-    alert(`Шкода, що ви не захотіли ввести своє місто`)
+    output += 'Шкода, що ви не захотіли ввести своє місто\n';
     IsAnyCity = false;
+    break;
   default:
-    alert(`Ви живете в місті ${city}`)
+    output += `Ви живете в місті ${city}\n`;
 }
 
 const Currentyear = current - year;
 if (year > 0) {
-  alert(`Тебе ${year} года`)
+  output += `Тебе ${Currentyear} года\n`;
 }
 else {
-  alert(`Шкода, що ви не захотіли ввести свій рік народження`)
+  output += 'Шкода, що ви не захотіли ввести свій рік народження\n';
 }
-
 
 let IsAnySport = true;
 switch (sport) {
   case "Бокс":
-    alert(` Круто! Хочешь стать Александром Усиком?`)
+    output += 'Круто! Хочешь стать Александром Усиком?\n';
     break;
   case "Волейбол":
-    alert(` Круто! Хочешь стать Иваном Зайцевым?`)
+    output += 'Круто! Хочешь стать Иваном Зайцевым?\n';
     break;
   case "Футбол":
-    alert(` Круто! Хочешь стать Криштиану Роналду?`)
+    output += 'Круто! Хочешь стать Криштиану Роналду?\n';
     break;
   case null:
   case "":
-  IsAnySport = true;
-    alert(`Шкода, що ви не захотіли ввести свій вид спорту`)
+    output += 'Шкода, що ви не захотіли ввести свій вид спорту\n';
+    IsAnySport = false;
+    break;
 }
-
 
 if (IsAnySport === false && IsAnyCity === false){
-  alert (` ви не ввели ані спорт ані місто`)
+  output += 'ви не ввели ані спорт ані місто\n';
 }
 else if (IsAnySport === true && IsAnyCity === false) {
-  alert (`Ви не ввели місто`)
+  output += 'Ви не ввели місто\n';
 }
+
+alert(output);
