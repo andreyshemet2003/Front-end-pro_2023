@@ -1,55 +1,52 @@
-//Завдання 1
-const arr = [];
-for (let i = 10; i <= 20; i++) {
-  arr.push(i);
+const arr = [
+  16, -37, 54, -4, 72, -56, 47, 4, -16, 25, -37, 46, 4, -51, 27, -63, 4, -54,
+  76, -4, 12, -35, 4, 47,
+];
+console.log(`Array: ${arr}`);
+const arrPositive = arr.filter((item) => item > 0);
+const result = arrPositive.reduce((sum, current) => sum + current,0);
+console.log(
+  `\nArray positive elements: ${arrPositive} \nLength array positive elements: ${arrPositive.length} \nSum of positive elements: ${result}`
+);
+// Part 2
+let minElement = arr[0];
+let minIndex = 0;
+for (let i = 1; i < arr.length; i++) {
+  if (arr[i] < minElement) {
+    minElement = arr[i];
+    minIndex = i;
+  }
 }
-console.log(`1) ${arr.join(",")} \n `);
+console.log("Мінімальний елемент:", minElement);
+console.log("Порядковий номер мінімального елемента:", minIndex);
+//part 3
+for (let i = 1; i < arr.length; i++) {
+  if (arr[i] > maxElement) {
+    maxElement = arr[i];
+    maxndex = i;
+  }
+}
+let maxElement = arr[0];
+let maxIndex = 0;
+console.log("Максимальний елемент:", minElement);
+console.log("Порядковий номер максимального елемента:", minIndex);
+//part 4
+let countNegative = 0;
 
-//Завдання 2
-const arrSquare = [];
-for (let i = 10; i <= 20; i++) {
-  arrSquare.push(i ** 2);
-}
-console.log(`2) ${arrSquare.join(",")} \n `);
-//Завдання 3
-const arrSeven = [];
-for (let i = 1; i <= 10; i++) {
-  arrSqaure.push(i ** 2);
-}
-console.log(`3) ${arrSeven.join(",")} \n `);
-//Завдання 4
-let sum = 0;
-for (let i = 1; i <= 15; i++) {
-  sum += i;
-}
-console.log(`4) ${sum} \n `);
-//Завдання 5
-let productOfNumbers = 1;
-for (let i = 15; i <= 35; i++) {
-  productOfNumbers *= i;
-}
-console.log(`5) ${BigInt(productOfNumbers)} \n `);
-//Завдання 6
-let sumAverage = 0;
-const n = 500;
-for (let i = 1; i <= n; i++) {
-  sumAverage += i;
-}
-const averageNumber = sumAverage / n;
-console.log(`6) ${averageNumber} \n `);
-//Завдання 7
-let sumOfPairedNumbers = 0;
-for (let i = 30; i <= 80; i++) {
-  if (i % 2 === 0) {
-    sumOfPairedNumbers += i;
+for (let i = 0; i < arr.length; i++) {
+  if (arr[i] < 0) {
+    countNegative++;
   }
 }
-console.log(`7) ${sumOfPairedNumbers} \n `);
-//Завдання 8
-const arrMultipleOfThree = [];
-for (let i = 100; i <= 200; i++) {
-  if (i % 3 === 0) {
-    arrMultipleOfThree.push(i);
-  }
+console.log("Кількість негативних елементів:", countNegative);
+//part 5
+let product = 1;
+let i = 0;
+
+while (i < arr.length) {
+  if (arr[i] > 0) {
+    product *= arr[i];
+  } 
+  i++;
 }
-console.log(`8) ${arrMultipleOfThree.join(",")} \n `);
+console.log("Добуток позитивних елементів:", product);
