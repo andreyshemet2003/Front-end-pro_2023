@@ -69,5 +69,5 @@ let y = (prompt('Enter second number: '));
     return str.split('').filter(char => !chars.includes(char)).join('');
   }
   console.log(func(" hello world", ['l', 'd']));
-//222
+
   // Мне казалось я сойду с ума от количества логических операций в этом задании, спасите. Я вроде-бы понимаю , но всё равно не понимаю как правильно в голове запомнить действие "char => !chars.includes(char))"
