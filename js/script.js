@@ -1,29 +1,14 @@
-console.log('apartment222');
 
-
-import House from "./house.js";
-import Apartment from "./apartment.js";
+import Car from "./car.js";
 import Human from "./human.js";
 
+const human = new Human("Sasha", 41);
+const human2 = new Human("HAnna", 37);
 
-let human = new Human("Andrew", "male");
-let human2 = new Human("Hanna", "female");
-let human3 = new Human("Olga", "female");
+const bmw = new Car("BMW", "X5", 2020, "black");
+const shevrolet = new Car("Shevrolet", "Camaro", 1980, "yellow");
 
-console.log(human);
+bmw.assignOwner();
+shevrolet.assignOwner(human);
 
-let apartment114 = new Apartment();
-let apartment222 = new Apartment();
-
-apartment222.addResidents(human);
-apartment222.addResidents(human2);
-apartment114.addResidents(human3);
-
-console.log(apartment222);
-
-let houseFirst = new House(2);
-
-houseFirst.addApartment(apartment222);
-houseFirst.addApartment(apartment114);
-
-console.log(houseFirst);
+bmw.showInfoCar()
