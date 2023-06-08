@@ -1,0 +1,70 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.img-responsive {
+    max-width: 100%;
+    height: auto;
+}
+
+.body {
+    font-family: 'Arial', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    margin: 0 auto;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1500px;
+    min-width: 375px;
+    padding: 30px 15px;
+}
+
+.questions {
+    font-weight: 500;
+    font-size: 24px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.answers {
+    padding: 30px 0;
+    display: grid;
+    column-gap: 10px;
+    grid-template-columns: repeat(auto-fit, 60px);
+    text-align: center;
+}
+
+.answers__card {
+    text-align: center;
+}
+
+.answers__btn {
+    border-radius: 50%;
+    background-color: transparent;
+    font-size: 50px;
+    text-align: center;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+}
+
+.answers__voice {
+    padding-top: 15px;
+
+}
+
+.new-answer {
+    padding: 25px;
+    background-color: grey;
+    text-align: center;
+}
+
+.add-answers {
+    padding-top: 40px;
+    display: grid;
+    column-gap: 10px;
+    grid-template-columns: repeat(auto-fit, 60px);
+}
